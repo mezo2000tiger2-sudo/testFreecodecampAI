@@ -11,3 +11,4 @@ async function fetchData(url) {
     } catch (error) {
         console.error('Error fetching data:', error);
     }
+}

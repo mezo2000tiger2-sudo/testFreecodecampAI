@@ -1,5 +1,13 @@
 // State Management
-let habits = JSON.parse(localStorage.getItem('habits')) || [];
+let habits;
+try {
+    const stored = localStorage.getItem('habits');
+    habits = stored ? JSON.parse(stored) : [];
+} catch (e) {
+    console.error("Failed to parse habits from localStorage:", e);
+    habits = [];
+    localStorage.setItem('habits', JSON.stringify([]));
+}
 
 const habitInput = document.getElementById('habitInput');
 const addHabitBtn = document.getElementById('addHabitBtn');

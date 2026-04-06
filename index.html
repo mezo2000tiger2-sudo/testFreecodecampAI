@@ -24,13 +24,54 @@
             font-family: 'Inter', sans-serif;
             background: var(--bg-gradient);
             display: flex;
-            justify-content: center;
-            align-items: flex-start;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             min-height: 100vh;
             margin: 0;
-            padding: 40px 20px;
+            padding: 20px;
             color: var(--text-main);
             box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(12px);
+            padding: 0.5rem;
+            border-radius: 1.25rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .nav-link {
+            color: white;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.85rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: 1rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            flex: 1;
+            text-align: center;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .nav-link.active {
+            background: white;
+            color: var(--primary);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .container {
@@ -311,6 +352,10 @@
     </style>
 </head>
 <body>
+    <nav class="navbar">
+        <a href="index.html" class="nav-link active">Tasks</a>
+        <a href="habit.html" class="nav-link">Habits</a>
+    </nav>
     <div class="container">
         <h1>To-Do List</h1>
         <div class="input-group">
@@ -350,11 +395,6 @@
         <div id="completedSection" style="display: none;">
             <div class="section-header completed-header">✅ Completed</div>
             <ul id="completedList"></ul>
-        </div>
-    </div>
-    <script src="todo.js"></script>
-</body>
-</html>   <ul id="completedList"></ul>
         </div>
     </div>
     <script src="todo.js"></script>

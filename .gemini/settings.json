@@ -1,0 +1,16 @@
+{
+  "ui": {
+    "footer": {
+      "hideContextPercentage": false
+    }
+  },
+  "mcpServers": {
+    "context7": {
+      "httpUrl": "https://mcp.context7.com/mcp",
+      "headers": {
+        "CONTEXT7_API_KEY": "ctx7sk-4270468b-209f-4590-b07a-8e499f24978d",
+        "Accept": "application/json, text/event-stream"
+      }
+    }
+  }
+}

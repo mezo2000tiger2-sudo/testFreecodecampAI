@@ -1,0 +1,11 @@
+description = "create a new page"
+prompt = """
+before doing anything run a shell command to check if there is any uncommitted changes on the current branch. If there is anything uncommitted or unstaged, tell the user there is an uncommitted change. DON'T GO ANY FURTHER.
+
+I want you to make a new html, css and javascript page for the idea as described here - {{args}}.
+
+Your job is to:
+1- make a modern html css looking design with vanilla css and make it responsive on all screens
+2- make the logic for this page and use local storage to save any necessary data
+3- check if there is any problem in the js and DOM in the page
+"""
